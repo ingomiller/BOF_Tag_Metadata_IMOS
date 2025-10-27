@@ -1,0 +1,12 @@
+name: TagSheets
+title: TagSheets
+username: imiller1
+account: imiller1
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 13762992
+bundleId: 9674695
+url: https://imiller1.shinyapps.io/TagSheets/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
