@@ -5,7 +5,7 @@ library(readxl)
 library(stringr)
 
 # Folder with all Tag metadata sheets
-folder_path <- "data/Tag_Metadata_Files"
+folder_path <- "Tag_Metadata_Files"
 
 # List all .xls files in the folder
 AC_tag_sheets <- list.files(folder_path, pattern = "\\.xls$", full.names = TRUE)
