@@ -76,11 +76,11 @@ ui <- fluidPage(
         tags$br(),
         "That is the part after the second hyphen.",
         tags$br(),
-        "You can enter one or several IDs separated by ';'.",
+        "You can enter one or several IDs separated by ';', or with space",
         tags$br(),
-        "Example: 615; 721; 900",
+        "Example: 615; 721; 900 OR 615 721 900",
         shiny::tags$br(),
-        "You can also search by researcher only."
+        "You can also search by researcher only, or both."
       ),
       selectizeInput(
         inputId = "researcher",
@@ -115,9 +115,16 @@ server <- function(input, output) {
     
     if (!is.null(input$tag_id) && stringr::str_trim(input$tag_id) != "") {
       
+      # search_terms <- input$tag_id |>
+      #   as.character() |>
+      #   stringr::str_split(";") |>
+      #   purrr::pluck(1) |>
+      #   stringr::str_trim()
+      
+      
       search_terms <- input$tag_id |>
         as.character() |>
-        stringr::str_split(";") |>
+        stringr::str_split("\\s*;\\s*|\\s+") |>
         purrr::pluck(1) |>
         stringr::str_trim()
       
