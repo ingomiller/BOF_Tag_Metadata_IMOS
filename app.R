@@ -57,6 +57,7 @@ tryCatch({
 
 
 ui <- fluidPage(
+  theme = shinytheme("cerulean"),
   tags$div(
     style = "text-align: left; margin-top: 20px;",
     tags$img(src = "logo.png", height = "75px")
