@@ -20,7 +20,8 @@ library(gridExtra)
 
 # Load and combine the data once globally
 tryCatch({
-  folder_path <- "Tag_Metadata_Files/"
+  # folder_path <- "Tag_Metadata_Files/"
+  folder_path <- "/Users/ingo/Library/CloudStorage/OneDrive-Subco/BOF/Equipment/Vemco_Innovasea/Tag_Metadata_Files"
   AC_tag_sheets <- list.files(folder_path, pattern = "\\.xls$", full.names = TRUE)
   
   tag_list <- lapply(AC_tag_sheets, function(file) {
